@@ -4,6 +4,7 @@ import '../styles/App.css';
 import Hello from './HelloComponent';
 import About from './AboutComponent';
 import Books from './BooksComponent';
+import Home from './HomeComponent';
 
 // import route Components here
 import {
@@ -26,6 +27,7 @@ class App extends Component {
               <li><Link to="/books">Books</Link></li>
             </ul>
             <hr/>
+            <Route path="/" exact={true} component={Home} />
             <Route path="/hello" component={Hello} />
             <Route path="/about" component={About} />
             <Route path="/books" component={Books} />
