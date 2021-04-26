@@ -27,11 +27,14 @@ class App extends Component {
               <li><Link to="/books">Books</Link></li>
             </ul>
             <hr/>
-            <Route path="/" exact={true} component={Home} />
-            <Route path="/hello" component={Hello} />
-            <Route path="/hello/goodmorning" render={() => {return <h1>Good Morning</h1>}}/>
-            <Route path="/about" component={About} />
-            <Route path="/books" component={Books} />
+            <Switch>
+              <Route path="/" exact={true} component={Home} />
+              <Route path="/hello" component={Hello} />
+              <Route path="/hello/goodmorning" render={() => {return <h1>Good Morning</h1>}}/>
+              <Route path="/about" component={About} />
+              <Route path="/books" component={Books} />
+              <Route render={() => <h1>Catch-All Route</h1>}/>
+            </Switch>
           </div>
         </div>
       </Router>
